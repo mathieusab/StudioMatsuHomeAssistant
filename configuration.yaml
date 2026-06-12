@@ -17,12 +17,12 @@ frontend:
 
 lovelace:
   dashboards:
-    vmc-dashboard:
+    hvac-dashboard:
       mode: yaml
-      title: VMC
+      title: HVAC Control
       icon: mdi:fan
       show_in_sidebar: true
-      filename: lovelace_vmc.yaml
+      filename: lovelace_hvac.yaml
 
 # HTTP
 http:
