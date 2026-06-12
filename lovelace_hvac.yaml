@@ -9,20 +9,22 @@ views:
           ## HVAC Control
           Choose the desired speed for each zone and check the actual speed applied by the relays.
 
-      - type: entities
-        title: HVAC Main
-        show_header_toggle: false
-        entities:
-          - entity: input_select.hvac_main_speed
-            name: Desired Speed
-          - entity: sensor.hvac_main_actual_speed
-            name: Actual Speed
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: HVAC Main
+            show_header_toggle: false
+            entities:
+              - entity: input_select.hvac_main_speed
+                name: Desired Speed
+              - entity: sensor.hvac_main_actual_speed
+                name: Actual Speed
 
-      - type: entities
-        title: HVAC Drums and Toilets
-        show_header_toggle: false
-        entities:
-          - entity: input_select.hvac_drums_and_toilets_speed
-            name: Desired Speed
-          - entity: sensor.hvac_drums_and_toilets_actual_speed
-            name: Actual Speed
+          - type: entities
+            title: HVAC Drums and Toilets
+            show_header_toggle: false
+            entities:
+              - entity: input_select.hvac_drums_and_toilets_speed
+                name: Desired Speed
+              - entity: sensor.hvac_drums_and_toilets_actual_speed
+                name: Actual Speed
