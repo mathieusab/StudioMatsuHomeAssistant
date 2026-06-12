@@ -1,0 +1,28 @@
+title: VMC
+views:
+  - title: VMC
+    path: vmc
+    icon: mdi:fan
+    cards:
+      - type: markdown
+        content: |
+          ## Controle VMC
+          Choisissez la vitesse demandee pour chaque zone et verifiez la vitesse effectivement appliquee par les relais.
+
+      - type: entities
+        title: VMC Principale
+        show_header_toggle: false
+        entities:
+          - entity: input_select.hvac_main_speed
+            name: Vitesse demandee
+          - entity: sensor.hvac_main_actual_speed
+            name: Vitesse actuelle
+
+      - type: entities
+        title: VMC Tambours et Toilettes
+        show_header_toggle: false
+        entities:
+          - entity: input_select.hvac_drums_and_toilets_speed
+            name: Vitesse demandee
+          - entity: sensor.hvac_drums_and_toilets_actual_speed
+            name: Vitesse actuelle

@@ -6,7 +6,6 @@
 hvac_drums_and_toilets_speed:
   name: "HVAC Drums and Toilets - Speed"
   options:
-    - "Off"
     - "Low speed"
     - "Medium speed"
     - "High speed"
@@ -16,7 +15,6 @@ hvac_drums_and_toilets_speed:
 hvac_main_speed:
   name: "HVAC Main - Speed"
   options:
-    - "Off"
     - "Low speed"
     - "Medium speed"
     - "High speed"
