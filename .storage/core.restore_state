@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.restore_state",
+  "data": [
+    {
+      "state": {"entity_id":"update.home_assistant_supervisor_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"2026.06.1","in_progress":false,"latest_version":"2026.06.1","release_summary":null,"release_url":"https://github.com/home-assistant/supervisor/releases/tag/2026.06.1","skipped_version":null,"title":"Home Assistant Supervisor","update_percentage":null,"entity_picture":"/api/brands/integration/hassio/icon.png?placeholder=no","friendly_name":"Home Assistant Supervisor Update","supported_features":5},"last_changed":"2026-06-12T09:06:06.386230+00:00","last_reported":"2026-06-12T09:06:06.386230+00:00","last_updated":"2026-06-12T09:06:06.386230+00:00","context":{"id":"01KTXH9PDJK2NZ786TE741Y336","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-06-12T09:21:16.312230+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_core_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2026.6.2","in_progress":false,"latest_version":"2026.6.2","release_summary":null,"release_url":"https://www.home-assistant.io/latest-release-notes/","skipped_version":null,"title":"Home Assistant Core","update_percentage":null,"entity_picture":"/api/brands/integration/homeassistant/icon.png?placeholder=no","friendly_name":"Home Assistant Core Update","supported_features":15},"last_changed":"2026-06-12T09:06:06.386583+00:00","last_reported":"2026-06-12T09:06:06.386583+00:00","last_updated":"2026-06-12T09:06:06.386583+00:00","context":{"id":"01KTXH9PDJB96KPVMK8ZEYP7VN","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-06-12T09:21:16.312230+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_operating_system_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"17.3","in_progress":false,"latest_version":"17.3","release_summary":null,"release_url":"https://github.com/home-assistant/operating-system/releases/tag/17.3","skipped_version":null,"title":"Home Assistant Operating System","update_percentage":null,"entity_picture":"/api/brands/integration/homeassistant/icon.png?placeholder=no","friendly_name":"Home Assistant Operating System Update","supported_features":11},"last_changed":"2026-06-12T09:06:06.386741+00:00","last_reported":"2026-06-12T09:06:06.386741+00:00","last_updated":"2026-06-12T09:06:06.386741+00:00","context":{"id":"01KTXH9PDJY7H51SWB5KBV84Z0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-06-12T09:21:16.312230+00:00"
+    },
+    {
+      "state": {"entity_id":"conversation.home_assistant","state":"unknown","attributes":{"friendly_name":"Home Assistant","supported_features":1},"last_changed":"2026-06-12T09:06:06.896019+00:00","last_reported":"2026-06-12T09:06:06.896019+00:00","last_updated":"2026-06-12T09:06:06.896019+00:00","context":{"id":"01KTXH9PXGQ7P8AATKT184B8NE","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-06-12T09:21:16.312230+00:00"
+    },
+    {
+      "state": {"entity_id":"event.backup_automatic_backup","state":"unknown","attributes":{"event_types":["completed","failed","in_progress"],"event_type":null,"friendly_name":"Backup Automatic backup"},"last_changed":"2026-06-12T09:06:07.470186+00:00","last_reported":"2026-06-12T09:06:07.470186+00:00","last_updated":"2026-06-12T09:06:07.470186+00:00","context":{"id":"01KTXH9QFEBNZXQ5NYJM60SKB4","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": null,
+        "last_event_attributes": null
+      },
+      "last_seen": "2026-06-12T09:21:16.312230+00:00"
+    },
+    {
+      "state": {"entity_id":"person.mathieu","state":"unknown","attributes":{"editable":true,"id":"mathieu","device_trackers":[],"in_zones":[],"user_id":"d929342025564d3d936ca19bd3f76e89","friendly_name":"Mathieu"},"last_changed":"2026-06-12T09:06:08.989078+00:00","last_reported":"2026-06-12T09:06:16.313508+00:00","last_updated":"2026-06-12T09:06:16.313508+00:00","context":{"id":"01KTXHA03SZGTNB64D4BXTRVKN","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-06-12T09:21:16.312230+00:00"
+    },
+    {
+      "state": {"entity_id":"tts.google_translate_en_com","state":"unknown","attributes":{"friendly_name":"Google Translate en com"},"last_changed":"2026-06-12T09:06:31.055063+00:00","last_reported":"2026-06-12T09:06:31.055157+00:00","last_updated":"2026-06-12T09:06:31.055063+00:00","context":{"id":"01KTXHAEGFVVVAWR6M56AJAH1X","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-06-12T09:21:16.312230+00:00"
+    }
+  ]
+}
