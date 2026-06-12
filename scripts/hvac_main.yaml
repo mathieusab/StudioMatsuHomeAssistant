@@ -1,0 +1,42 @@
+# =============================================================================
+# HVAC Main scripts
+# Relay C = switch.hvac_relay_l3
+# Relay D = switch.hvac_relay_l4
+#
+# Wiring logic:
+#   C OFF          -> Low speed
+#   C ON  / D OFF  -> Medium speed
+#   C ON  / D ON   -> High speed
+# =============================================================================
+
+hvac_main_low_speed:
+  alias: "HVAC Main - Low speed"
+  icon: mdi:fan-speed-1
+  sequence:
+    - service: switch.turn_off
+      target:
+        entity_id:
+          - switch.hvac_relay_l3
+          - switch.hvac_relay_l4
+
+hvac_main_medium_speed:
+  alias: "HVAC Main - Medium speed"
+  icon: mdi:fan-speed-2
+  sequence:
+    - service: switch.turn_off
+      target:
+        entity_id: switch.hvac_relay_l4
+    - delay: "00:00:00.500"
+    - service: switch.turn_on
+      target:
+        entity_id: switch.hvac_relay_l3
+
+hvac_main_high_speed:
+  alias: "HVAC Main - High speed"
+  icon: mdi:fan-speed-3
+  sequence:
+    - service: switch.turn_on
+      target:
+        entity_id:
+          - switch.hvac_relay_l3
+          - switch.hvac_relay_l4

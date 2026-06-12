@@ -1,0 +1,42 @@
+# =============================================================================
+# HVAC Drums and Toilets scripts
+# Relay A = switch.hvac_relay_l1
+# Relay B = switch.hvac_relay_l2
+#
+# Wiring logic:
+#   A OFF          -> Low speed
+#   A ON  / B OFF  -> Medium speed
+#   A ON  / B ON   -> High speed
+# =============================================================================
+
+hvac_drums_and_toilets_low_speed:
+  alias: "HVAC Drums and Toilets - Low speed"
+  icon: mdi:fan-speed-1
+  sequence:
+    - service: switch.turn_off
+      target:
+        entity_id:
+          - switch.hvac_relay_l1
+          - switch.hvac_relay_l2
+
+hvac_drums_and_toilets_medium_speed:
+  alias: "HVAC Drums and Toilets - Medium speed"
+  icon: mdi:fan-speed-2
+  sequence:
+    - service: switch.turn_off
+      target:
+        entity_id: switch.hvac_relay_l2
+    - delay: "00:00:00.500"  # short safety delay
+    - service: switch.turn_on
+      target:
+        entity_id: switch.hvac_relay_l1
+
+hvac_drums_and_toilets_high_speed:
+  alias: "HVAC Drums and Toilets - High speed"
+  icon: mdi:fan-speed-3
+  sequence:
+    - service: switch.turn_on
+      target:
+        entity_id:
+          - switch.hvac_relay_l1
+          - switch.hvac_relay_l2

@@ -1,0 +1,32 @@
+# =============================================================================
+# Automations HVAC Drums and Toilets
+# Controlled by input_select.hvac_drums_and_toilets_speed
+# =============================================================================
+
+- id: hvac_drums_and_toilets_speed_change
+  alias: "HVAC Drums and Toilets - Speed Change"
+  description: "Applies the selected speed from the interface"
+  trigger:
+    - platform: state
+      entity_id: input_select.hvac_drums_and_toilets_speed
+  action:
+    - choose:
+        - conditions:
+            - condition: state
+              entity_id: input_select.hvac_drums_and_toilets_speed
+              state: "Low speed"
+          sequence:
+            - service: script.hvac_drums_and_toilets_low_speed
+        - conditions:
+            - condition: state
+              entity_id: input_select.hvac_drums_and_toilets_speed
+              state: "Medium speed"
+          sequence:
+            - service: script.hvac_drums_and_toilets_medium_speed
+        - conditions:
+            - condition: state
+              entity_id: input_select.hvac_drums_and_toilets_speed
+              state: "High speed"
+          sequence:
+            - service: script.hvac_drums_and_toilets_high_speed
+  mode: single

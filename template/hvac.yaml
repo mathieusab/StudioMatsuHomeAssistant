@@ -1,0 +1,41 @@
+# =============================================================================
+# HVAC templates - Computed sensors to display actual HVAC speed
+# based on the Zigbee relay states
+# =============================================================================
+
+# HVAC relay entity names (adjust according to pairing names):
+#   switch.hvac_relay_l1  -> Relay A HVAC Drums and Toilets
+#   switch.hvac_relay_l2  -> Relay B HVAC Drums and Toilets
+#   switch.hvac_relay_l3  -> Relay C HVAC Main
+#   switch.hvac_relay_l4  -> Relay D HVAC Main
+
+- sensor:
+    - name: "HVAC Drums and Toilets - Actual speed"
+      icon: mdi:fan
+      state: >
+        {% set a = states('switch.hvac_relay_l1') %}
+        {% set b = states('switch.hvac_relay_l2') %}
+        {% if a == 'off' %}
+          Low speed
+        {% elif a == 'on' and b == 'off' %}
+          Medium speed
+        {% elif a == 'on' and b == 'on' %}
+          High speed
+        {% else %}
+          Unknown
+        {% endif %}
+
+    - name: "HVAC Main - Actual speed"
+      icon: mdi:fan
+      state: >
+        {% set c = states('switch.hvac_relay_l3') %}
+        {% set d = states('switch.hvac_relay_l4') %}
+        {% if c == 'off' %}
+          Low speed
+        {% elif c == 'on' and d == 'off' %}
+          Medium speed
+        {% elif c == 'on' and d == 'on' %}
+          High speed
+        {% else %}
+          Unknown
+        {% endif %}

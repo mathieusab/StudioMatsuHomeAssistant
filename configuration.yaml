@@ -11,17 +11,17 @@ homeassistant:
   time_zone: Europe/Paris
   country: FR
 
-# Interface web
+# Web interface
 frontend:
   themes: !include_dir_merge_named themes/
 
 # HTTP
 http:
 
-# Découverte automatique des appareils
+# Automatic device discovery
 discovery:
 
-# Historique et logs
+# History and logs
 recorder:
   purge_keep_days: 30
 
@@ -35,7 +35,7 @@ logger:
     homeassistant.components.mqtt: info
     zigbee2mqtt: info
 
-# MQTT (pour Zigbee2MQTT)
+# MQTT (for Zigbee2MQTT)
 mqtt:
 
 # Includes

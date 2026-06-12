@@ -1,0 +1,31 @@
+# =============================================================================
+# HVAC Main automations
+# =============================================================================
+
+- id: hvac_main_speed_change
+  alias: "HVAC Main - Speed Change"
+  description: "Applies the selected speed from the interface"
+  trigger:
+    - platform: state
+      entity_id: input_select.hvac_main_speed
+  action:
+    - choose:
+        - conditions:
+            - condition: state
+              entity_id: input_select.hvac_main_speed
+              state: "Low speed"
+          sequence:
+            - service: script.hvac_main_low_speed
+        - conditions:
+            - condition: state
+              entity_id: input_select.hvac_main_speed
+              state: "Medium speed"
+          sequence:
+            - service: script.hvac_main_medium_speed
+        - conditions:
+            - condition: state
+              entity_id: input_select.hvac_main_speed
+              state: "High speed"
+          sequence:
+            - service: script.hvac_main_high_speed
+  mode: single
