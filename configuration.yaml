@@ -17,7 +17,7 @@ frontend:
 
 lovelace:
   dashboards:
-    vmc:
+    vmc-dashboard:
       mode: yaml
       title: VMC
       icon: mdi:fan
