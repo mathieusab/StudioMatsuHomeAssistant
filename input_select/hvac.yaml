@@ -1,0 +1,24 @@
+# =============================================================================
+# HVAC speed selectors
+# Allow selecting the speed from the HA interface
+# =============================================================================
+
+hvac_drums_and_toilets_speed:
+  name: "HVAC Drums and Toilets - Speed"
+  options:
+    - "Off"
+    - "Low speed"
+    - "Medium speed"
+    - "High speed"
+  initial: "Low speed"
+  icon: mdi:fan
+
+hvac_main_speed:
+  name: "HVAC Main - Speed"
+  options:
+    - "Off"
+    - "Low speed"
+    - "Medium speed"
+    - "High speed"
+  initial: "Low speed"
+  icon: mdi:fan

@@ -1,1 +1,45 @@
-# Home Assistant Config
+# =============================================================================
+# Studio Matsu — Home Assistant Configuration
+# =============================================================================
+
+homeassistant:
+  name: Studio Matsu
+  latitude: !secret latitude
+  longitude: !secret longitude
+  unit_system: metric
+  currency: EUR
+  time_zone: Europe/Paris
+  country: FR
+
+# Web interface
+frontend:
+  themes: !include_dir_merge_named themes/
+
+# HTTP
+http:
+
+# Automatic device discovery
+discovery:
+
+# History and logs
+recorder:
+  purge_keep_days: 30
+
+history:
+
+logbook:
+
+logger:
+  default: warning
+  logs:
+    homeassistant.components.mqtt: info
+    zigbee2mqtt: info
+
+# MQTT (for Zigbee2MQTT)
+mqtt:
+
+# Includes
+input_select: !include_dir_merge_named input_select/
+automation: !include_dir_merge_list automations/
+script: !include_dir_merge_named scripts/
+template: !include_dir_list template/
