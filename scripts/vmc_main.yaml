@@ -1,0 +1,42 @@
+# =============================================================================
+# Scripts VMC Principale
+# Relais C = switch.relais_vmc_l3
+# Relais D = switch.relais_vmc_l4
+#
+# Logique câblage :
+#   C OFF          → Petite vitesse
+#   C ON  / D OFF  → Moyenne vitesse
+#   C ON  / D ON   → Grande vitesse
+# =============================================================================
+
+vmc_principale_petite_vitesse:
+  alias: "VMC Principale — Petite vitesse"
+  icon: mdi:fan-speed-1
+  sequence:
+    - service: switch.turn_off
+      target:
+        entity_id:
+          - switch.relais_vmc_l3
+          - switch.relais_vmc_l4
+
+vmc_principale_moyenne_vitesse:
+  alias: "VMC Principale — Moyenne vitesse"
+  icon: mdi:fan-speed-2
+  sequence:
+    - service: switch.turn_off
+      target:
+        entity_id: switch.relais_vmc_l4
+    - delay: "00:00:00.500"
+    - service: switch.turn_on
+      target:
+        entity_id: switch.relais_vmc_l3
+
+vmc_principale_grande_vitesse:
+  alias: "VMC Principale — Grande vitesse"
+  icon: mdi:fan-speed-3
+  sequence:
+    - service: switch.turn_on
+      target:
+        entity_id:
+          - switch.relais_vmc_l3
+          - switch.relais_vmc_l4

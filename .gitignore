@@ -1,0 +1,19 @@
+# Secrets
+secrets.yaml
+
+# Fichiers générés par HA
+home-assistant.log
+home-assistant.log.*
+home-assistant_v2.db
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal
+
+# Dossiers internes HA
+.storage/
+deps/
+tts/
+.cloud/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
