@@ -18,9 +18,6 @@ frontend:
 # HTTP
 http:
 
-# Automatic device discovery
-discovery:
-
 # History and logs
 recorder:
   purge_keep_days: 30
@@ -42,4 +39,4 @@ mqtt:
 input_select: !include_dir_merge_named input_select/
 automation: !include_dir_merge_list automations/
 script: !include_dir_merge_named scripts/
-template: !include_dir_list template/
+template: !include_dir_merge_list template/
