@@ -17,3 +17,7 @@ tts/
 # Fichiers système
 .DS_Store
 Thumbs.db
+.HA_VERSION
+.cache/
+.ha_run.lock
+blueprints/
