@@ -5,6 +5,8 @@ views:
     icon: mdi:fan
     cards:
       - type: markdown
+        view_layout:
+          grid-column: 1 / -1
         content: |
           ## HVAC Control
           Choose the desired speed for each zone and check the actual speed applied by the relays.
