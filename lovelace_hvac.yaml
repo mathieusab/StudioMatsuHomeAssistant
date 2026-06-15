@@ -26,10 +26,10 @@ views:
             columns: 2
             entities:
               - entity: switch.hvac_relay_l3
-                name: "Relay C (speed)"
+                name: "Relay C"
                 icon: mdi:electric-switch
               - entity: switch.hvac_relay_l4
-                name: "Relay D (high)"
+                name: "Relay D"
                 icon: mdi:electric-switch
 
       - type: vertical-stack
@@ -49,8 +49,8 @@ views:
             columns: 2
             entities:
               - entity: switch.hvac_relay_l1
-                name: "Relay A (speed)"
+                name: "Relay A"
                 icon: mdi:electric-switch
               - entity: switch.hvac_relay_l2
-                name: "Relay B (high)"
+                name: "Relay B"
                 icon: mdi:electric-switch
